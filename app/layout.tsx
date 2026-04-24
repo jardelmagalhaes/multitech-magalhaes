@@ -3,6 +3,22 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Script from "next/script";
+// app/layout.tsx
+// ... outros imports
+import WhatsAppButton from "./components/WhatsAppButton";
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="pt-BR">
+      <body className="bg-black text-white">
+        <Header />
+        {children}
+        {/* Adicione o botão aqui */}
+        <WhatsAppButton />
+      </body>
+    </html>
+  );
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
