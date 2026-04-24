@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header"; // h minúsculo para bater com seu arquivo header.tsx
+import Header from "./components/header"; 
 import Script from "next/script";
-import WhatsAppButton from "./components/WhatsBtn"; // Caminho para o seu arquivo WhatsBtn.tsx
+import WhatsAppButton from "./components/WhatsBtn"; 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +28,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {/* PIXEL DO TIKTOK COM SINTAXE CORRETA */}
         <Script id="tiktok-pixel" strategy="afterInteractive">
           {`
             !function (w, d, t) {
@@ -42,7 +41,7 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}>
         <Header />
-        {children}
+        <main>{children}</main>
         <WhatsAppButton />
       </body>
     </html>
