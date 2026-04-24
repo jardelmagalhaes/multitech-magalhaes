@@ -43,14 +43,13 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}>
         <Header />
         
-        {/* O children é o conteúdo da sua loja */}
-        {children}
+        <main>
+          {children}
+        </main>
         
-        {/* BOTÃO DE WHATSAPP FLUTUANTE */}
+        {/* BOTÃO DE WHATSAPP */}
         <WhatsAppButton />
       </body>
     </html>
   );
 }
-
-//atualização
